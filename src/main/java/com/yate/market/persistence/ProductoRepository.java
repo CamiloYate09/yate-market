@@ -23,8 +23,13 @@ import java.util.Optional;
 @Repository
 public class ProductoRepository implements ProductRepository {
 
-
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+
+    /**
+     * TODO verificar el error presente en el Autowired
+     */
+    @Autowired
     private ProductMapper productMapper;
 
 
@@ -38,7 +43,7 @@ public class ProductoRepository implements ProductRepository {
 
     @Override
     public Optional<List<Product>> getByCategory(int categoryId) {
-        List<Producto> productos = productoCrudRepository.findByIdCategoriaOOrderByNombreAsc(categoryId);
+        List<Producto> productos = productoCrudRepository.findByIdCategoriaOrderByNombreAsc(categoryId);
         return Optional.of(productMapper.toProducts(productos));
     }
 

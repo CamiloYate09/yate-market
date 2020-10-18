@@ -34,8 +34,12 @@ public class Compra {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
 
-
-    @OneToMany(mappedBy = "producto")
+    /**
+     * comprasProductos -> productos
+     * fetch = FetchType.EAGER -> se utiliza para recuperar una lista de datos
+     * antes de que se cierre la sesion de Hibernate
+     */
+    @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
     private List<ComprasProducto> comprasProductos;
 
     public Integer getIdCompra() {

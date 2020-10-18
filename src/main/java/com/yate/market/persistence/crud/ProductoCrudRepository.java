@@ -16,17 +16,17 @@ public interface ProductoCrudRepository extends CrudRepository<Producto, Integer
      * @param idProducto
      * @return
      */
-    List<Producto> findByIdCategoriaOOrderByNombreAsc(int idProducto);
+    List<Producto> findByIdCategoriaOrderByNombreAsc(int idProducto);
 
 
-    /**
-     * Segunda forma de hacerlo con query nativo sql
-     *
-     * @param idCategoria
-     * @return
-     */
-    @Query(value = "SELECT * FROM productos WHERE id_categoria = ?", nativeQuery = true)
-    List<Producto> getIdCategoria(int idCategoria);
+//    /**
+//     * Segunda forma de hacerlo con query nativo sql
+//     *
+//     * @param idCategoria
+//     * @return
+//     */
+//    @Query(value = "SELECT * FROM productos WHERE id_categoria = ?", nativeQuery = true)
+//    List<Producto> getIdCategoria(int idCategoria);
 
 
     Optional<List<Producto>> findByCantidadStockIsLessThanAndEstado(int cantidadStock, boolean estado);
