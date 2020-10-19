@@ -1,7 +1,6 @@
 package com.yate.market.persistence.crud;
 
 import com.yate.market.persistence.entity.Producto;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

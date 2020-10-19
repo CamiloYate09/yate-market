@@ -1,7 +1,6 @@
 package com.yate.market.persistence.entity;
 
 
-import javax.naming.Name;
 import javax.persistence.*;
 
 @Entity

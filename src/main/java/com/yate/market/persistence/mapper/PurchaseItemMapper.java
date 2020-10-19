@@ -1,7 +1,6 @@
 package com.yate.market.persistence.mapper;
 
 
-import com.yate.market.domain.Product;
 import com.yate.market.domain.PurchaseItem;
 import com.yate.market.persistence.entity.ComprasProducto;
 import org.mapstruct.InheritInverseConfiguration;

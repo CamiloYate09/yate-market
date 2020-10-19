@@ -4,7 +4,6 @@ import com.yate.market.domain.Purchase;
 import com.yate.market.domain.repository.PurchaseRepository;
 import com.yate.market.persistence.crud.CompraCrudRepository;
 import com.yate.market.persistence.entity.Compra;
-import com.yate.market.persistence.mapper.PurchaseItemMapper;
 import com.yate.market.persistence.mapper.PurchaseMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
